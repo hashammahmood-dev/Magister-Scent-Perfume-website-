@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Magister Scents</title>
+<meta name="description" content="Complete your order — Magister Scents luxury perfumes, delivered to your door.">
+<link rel="icon" href="images/logo/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo/logo.svg" alt="Magister Scents logo">
+      <span class="brand-name">Magister <span>Scents</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="index.html#footer">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="Search">🔍</button>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">🛍️<span class="cart-count">0</span></a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay-backdrop"></div>
+<div class="mobile-nav">
+  <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="cart.html">Cart</a>
+  <a href="index.html#footer">Contact</a>
+</div>
+
+<div class="search-overlay">
+  <div class="search-box">
+    <input type="text" placeholder="Search for perfumes..." aria-label="Search perfumes">
+    <div class="search-close">Close ✕</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<section class="page-header">
+  <h1>Checkout</h1>
+  <p class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.55)">Home</a> / <a href="cart.html" style="color:rgba(255,255,255,0.55)">Cart</a> / <span>Checkout</span></p>
+</section>
+
+<!-- ===================== CHECKOUT ===================== -->
+<section class="checkout-section">
+  <div class="container">
+    <div class="checkout-layout">
+
+      <form class="checkout-form-card" id="checkout-form" novalidate>
+        <h3>Delivery Details</h3>
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="e.g. Ayesha Malik" required>
+          <span class="form-error">Please enter your full name.</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="03XXXXXXXXX" required>
+            <span class="form-error">Please enter a valid phone number.</span>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="e.g. Lahore" required>
+            <span class="form-error">Please enter your city.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Complete Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="House #, Street, Area, Landmark" required></textarea>
+          <span class="form-error">Please enter your complete address.</span>
+        </div>
+
+        <h3 style="margin-top:36px;">Payment Method</h3>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Cash on Delivery">
+            <div><div class="po-name">Cash on Delivery</div><div class="po-sub">Pay when your order arrives</div></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="JazzCash">
+            <div><div class="po-name">JazzCash</div><div class="po-sub">Pay via JazzCash mobile wallet</div></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="EasyPaisa">
+            <div><div class="po-name">EasyPaisa</div><div class="po-sub">Pay via EasyPaisa mobile wallet</div></div>
+          </label>
+        </div>
+        <span class="form-error" id="payment-error" style="display:none;">Please select a payment method.</span>
+
+        <button type="submit" class="btn btn-gold btn-block mt-40">Place Order via WhatsApp</button>
+      </form>
+
+      <div class="order-summary-card">
+        <h3>Your Order</h3>
+        <div id="os-items"><!-- Injected by checkout.js --></div>
+        <div class="os-total"><span>Grand Total</span><span id="os-total">Rs 0</span></div>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.55); line-height:1.6;">
+          Placing your order opens WhatsApp with your order details pre-filled, ready to send to our team.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ORDER PLACED MODAL ===================== -->
+<div class="modal-backdrop" id="order-modal">
+  <div class="modal-box">
+    <div class="modal-icon">✓</div>
+    <h3>Order Sent!</h3>
+    <p>Your order details have been opened in WhatsApp. Send the message to confirm your order with our team.</p>
+    <button class="btn btn-gold btn-block" id="close-order-modal">Back to Home</button>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo/logo.svg" alt="Magister Scents logo">
+          <span class="brand-name" style="color:#fff">Magister <span>Scents</span></span>
+        </a>
+        <p>Where every fragrance tells a story. Discover luxury perfumes crafted for elegance, confidence and unforgettable memories.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="shop.html?category=men">Men</a></li>
+          <li><a href="shop.html?category=women">Women</a></li>
+          <li><a href="shop.html?category=unisex">Unisex</a></li>
+          <li><a href="shop.html?category=arabic">Arabic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 +92 300 1234567</li>
+          <li>💬 WhatsApp: +92 300 1234567</li>
+          <li>✉️ hello@magisterscents.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Magister Scents. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

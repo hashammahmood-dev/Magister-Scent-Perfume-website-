@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Perfumes — Magister Scents</title>
+<meta name="description" content="Browse the full Magister Scents collection — men's, women's, unisex and Arabic fragrances.">
+<link rel="icon" href="images/logo/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo/logo.svg" alt="Magister Scents logo">
+      <span class="brand-name">Magister <span>Scents</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="index.html#footer">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="Search">🔍</button>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">🛍️<span class="cart-count">0</span></a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay-backdrop"></div>
+<div class="mobile-nav">
+  <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="cart.html">Cart</a>
+  <a href="index.html#footer">Contact</a>
+</div>
+
+<div class="search-overlay">
+  <div class="search-box">
+    <input type="text" placeholder="Search for perfumes..." aria-label="Search perfumes">
+    <div class="search-close">Close ✕</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<section class="page-header">
+  <h1>Shop All Fragrances</h1>
+  <p class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.55)">Home</a> / <span>Shop</span></p>
+</section>
+
+<!-- ===================== SHOP ===================== -->
+<section class="shop-section">
+  <div class="container">
+    <div class="shop-toolbar">
+      <div class="toolbar-search">
+        <span>🔍</span>
+        <input type="text" id="shop-search" placeholder="Search perfumes by name or brand...">
+      </div>
+      <select id="shop-sort" class="toolbar-select">
+        <option value="default">Sort: Featured</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="filter-chips" style="margin-bottom:8px;">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="men">Men</button>
+      <button class="chip" data-category="women">Women</button>
+      <button class="chip" data-category="unisex">Unisex</button>
+      <button class="chip" data-category="arabic">Arabic</button>
+    </div>
+
+    <p class="results-count" id="results-count">12 fragrances found</p>
+
+    <div class="product-grid" id="shop-grid">
+      <!-- Injected by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo/logo.svg" alt="Magister Scents logo">
+          <span class="brand-name" style="color:#fff">Magister <span>Scents</span></span>
+        </a>
+        <p>Where every fragrance tells a story. Discover luxury perfumes crafted for elegance, confidence and unforgettable memories.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="shop.html?category=men">Men</a></li>
+          <li><a href="shop.html?category=women">Women</a></li>
+          <li><a href="shop.html?category=unisex">Unisex</a></li>
+          <li><a href="shop.html?category=arabic">Arabic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 +92 300 1234567</li>
+          <li>💬 WhatsApp: +92 300 1234567</li>
+          <li>✉️ hello@magisterscents.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Magister Scents. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

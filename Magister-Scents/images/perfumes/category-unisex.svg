@@ -1,0 +1,9 @@
+<svg width="500" height="600" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="gu" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1c1e1c"/><stop offset="100%" stop-color="#0F0F0F"/>
+  </linearGradient></defs>
+  <rect width="500" height="600" fill="url(#gu)"/>
+  <rect x="210" y="150" width="80" height="260" rx="30" fill="#3a3530" stroke="#D4AF37" stroke-width="1.5"/>
+  <rect x="235" y="120" width="30" height="32" fill="#D4AF37"/>
+  <text x="250" y="290" font-family="Playfair Display, serif" font-size="15" fill="#D4AF37" text-anchor="middle" letter-spacing="2">UNISEX</text>
+</svg>

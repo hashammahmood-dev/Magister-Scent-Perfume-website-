@@ -1,0 +1,16 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg3" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#262421"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg3)"/>
+  <rect x="160" y="90" width="80" height="24" fill="#D4AF37"/>
+  <circle cx="200" cy="70" r="16" fill="#0F0F0F" stroke="#D4AF37" stroke-width="1.5"/>
+  <rect x="130" y="114" width="140" height="270" fill="#1c1a17" stroke="#D4AF37" stroke-width="1.25"/>
+  <rect x="145" y="130" width="110" height="238" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+  <rect x="160" y="220" width="80" height="1" fill="#D4AF37"/>
+  <text x="200" y="255" font-family="'Playfair Display', Georgia, serif" font-size="13" fill="#D4AF37" text-anchor="middle" letter-spacing="3">MAGISTER</text>
+  <text x="200" y="272" font-family="Poppins, sans-serif" font-size="9" fill="#D4AF37" text-anchor="middle" letter-spacing="2">SCENTS</text>
+</svg>

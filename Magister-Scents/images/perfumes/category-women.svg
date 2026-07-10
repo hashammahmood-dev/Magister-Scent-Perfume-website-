@@ -1,0 +1,9 @@
+<svg width="500" height="600" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="gw" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#221c1a"/><stop offset="100%" stop-color="#0F0F0F"/>
+  </linearGradient></defs>
+  <rect width="500" height="600" fill="url(#gw)"/>
+  <path d="M210 160 Q210 130 250 130 Q290 130 290 160 L300 400 Q300 430 250 430 Q200 430 200 400 Z" fill="#4a4136" stroke="#D4AF37" stroke-width="1.5"/>
+  <rect x="235" y="105" width="30" height="30" fill="#D4AF37"/>
+  <text x="250" y="300" font-family="Playfair Display, serif" font-size="16" fill="#D4AF37" text-anchor="middle" letter-spacing="2">FEMME</text>
+</svg>

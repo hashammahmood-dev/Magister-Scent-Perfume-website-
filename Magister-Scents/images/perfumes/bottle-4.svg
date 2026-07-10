@@ -1,0 +1,16 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#241f18"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </radialGradient>
+    <linearGradient id="glass4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#7a6224"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg4)"/>
+  <path d="M180 70 L220 70 L225 110 L175 110 Z" fill="#D4AF37"/>
+  <path d="M175 110 Q130 160 140 230 Q100 280 120 360 Q130 400 200 405 Q270 400 280 360 Q300 280 260 230 Q270 160 225 110 Z" fill="url(#glass4)" opacity="0.92" stroke="#0F0F0F" stroke-width="1"/>
+  <text x="200" y="260" font-family="'Playfair Display', Georgia, serif" font-size="14" fill="#0F0F0F" text-anchor="middle" letter-spacing="2">OUD</text>
+</svg>
