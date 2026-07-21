@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSearchOverlay();
   initNewsletter();
   markActiveNavLink();
+  initHeroSlider();
 
   renderFeaturedProducts();   // home page
   initShopPage();             // shop page
@@ -194,6 +195,7 @@ function initProductDetailPage(){
       <div class="pd-price">
         ${formatPKR(product.price)}
         ${product.oldPrice ? `<span class="price-old">${formatPKR(product.oldPrice)}</span>` : ""}
+        ${product.oldPrice ? `<span class="price-discount">${Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)}% OFF</span>` : ""}
       </div>
       <p class="pd-description">${product.description}</p>
 
@@ -338,4 +340,48 @@ function renderCartPage(){
   if (subtotalEl) subtotalEl.textContent = formatPKR(subtotal);
   if (shippingEl) shippingEl.textContent = formatPKR(shipping);
   if (totalEl) totalEl.textContent = formatPKR(total);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Hero Slideshow                                                          */
+/* ---------------------------------------------------------------------- */
+function initHeroSlider(){
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".hero-dot");
+  const prevBtn = document.querySelector(".hero-prev");
+  const nextBtn = document.querySelector(".hero-next");
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function goTo(index){
+    slides[current].classList.remove("active");
+    dots[current]?.classList.remove("active");
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add("active");
+    dots[current]?.classList.add("active");
+  }
+
+  function next(){ goTo(current + 1); }
+  function prev(){ goTo(current - 1); }
+
+  function startAutoplay(){
+    timer = setInterval(next, 4000);
+  }
+  function resetAutoplay(){
+    clearInterval(timer);
+    startAutoplay();
+  }
+
+  nextBtn?.addEventListener("click", () => { next(); resetAutoplay(); });
+  prevBtn?.addEventListener("click", () => { prev(); resetAutoplay(); });
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      goTo(parseInt(dot.dataset.index));
+      resetAutoplay();
+    });
+  });
+
+  startAutoplay();
 }
