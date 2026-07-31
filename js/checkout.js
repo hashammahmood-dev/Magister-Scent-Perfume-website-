@@ -4,7 +4,7 @@
    Runs only on checkout.html.
    ========================================================================== */
 
-const WHATSAPP_NUMBER = "92XXXXXXXXXX"; // TODO: replace with real business number
+const WHATSAPP_NUMBER = "923015095023X"; // TODO: replace with real business number
 
 function initCheckoutPage(){
   const form = document.getElementById("checkout-form");
